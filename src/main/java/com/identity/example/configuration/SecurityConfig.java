@@ -40,14 +40,13 @@ public class SecurityConfig {
                     .requestMatchers("/auth/login")
                     .permitAll()
                     .requestMatchers("/users/**")
-                    //.permitAll()
+                    // .permitAll() - testing purposes
                     .authenticated()
                     .requestMatchers("/projects/**")
-                    //.permitAll()
-
+                    // .permitAll() - testing purposes
                     .authenticated()
-                        .requestMatchers("/actuator/**")
-                        .permitAll()
+                    .requestMatchers("/actuator/**")
+                    .permitAll()
                     .anyRequest()
                     .authenticated())
         .exceptionHandling(ex -> ex.authenticationEntryPoint(jwtAuthenticationEntryPoint))

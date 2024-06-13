@@ -25,7 +25,7 @@ public class ProjectController {
         return projectService.createProject(projectRequestDTO);
     }
 
-    @GetMapping(path = "/all")
+    @GetMapping
     List<ProjectDTO> getAllProjects() {
         return projectService.listProjects();
     }

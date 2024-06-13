@@ -1,3 +1,38 @@
+# Project Description
+
+## Project Overview
+
+This application is a basic project management system that establishes a many-to-many relationship between Users and Projects. Users can be assigned to multiple projects, and each project can have many users associated with it.
+
+## Technologies Used
+
+- **Programming Language**: Java SDK version 21
+- **Framework**: Spring Boot 3
+- **Database**: MySQL
+- **ORM**: Spring Data JPA
+- **Authorization**: JWT
+
+## Functionalities
+
+1. **User Creation**: The application allows for the creation of new users. Once created, these users can be assigned to various projects.
+
+2. **Project Creation**: New projects can also be created within the system. Similar to users, once a project has been created, users can then be assigned to it.
+
+3. **Assigning Users to a Project**: This feature gives you the ability to assign any user to any project that needs their involvement.
+
+4. **Deleting a User**: If a user is no longer necessary, the application provides functionality to remove that user from the system. However, it is important to note that this would also result in the user being removed from all related projects.
+
+## Architecture
+
+The application uses the Jakarta EE architecture with Spring MVC to handle web requests and return appropriate responses. Additionally, it uses Lombok for reducing boilerplate code, ensuring the codebase remains clean and readable.
+
+With `Spring Data JPA`, the application standardizes the process of interacting with the database, abstracting most of the complexity of database access, and letting developers focus more on business logic rather than database intricacies.
+
+The application uses JWT (JSON Web Tokens) for secure authorization and transmitting information between parties as JSON objects. This information can be verified and trusted because it is digitally signed.
+
+Overall, this application serves as a simple yet functional interface for managing users and projects in a many-to-many relationship, backed by reliable technologies for solidity and dependability. 
+
+
 ## Java Version
 
 This application is built using **Java JDK 21**, which is the long-term support (LTS) version as of the time of
@@ -7,7 +42,7 @@ writing (May 2024). You can verify your Java version by running the following co
 shell java -version
 ```
 
-If you do not have Java installed or have a different version, you can download JDK 17 from
+If you do not have Java installed or have a different version, you can download JDK 21 from
 the [official Oracle website](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
 
 ## Maven
@@ -43,6 +78,8 @@ This application protects certain routes that require authentication. Credential
 
 1. To authenticate, send a POST request to the `/login` endpoint. This will return a JWT token in the response body.
 2. For any subsequent requests to protected routes, include this token as a Bearer token in the `Authorization` header.
+
+NOTE: users that are created are not used in JWT token. Check Out `JwtAuthenticationFilter`
 
 ## Database Configuration
 

@@ -55,7 +55,7 @@ public class UserController {
     return userService.assignExistingProject(userUuid, projectUuid);
   }
 
-  @GetMapping("/all")
+  @GetMapping
   public @ResponseBody Iterable<UserResponseDTO> getAllUsers() {
     return userService.getAllUsers();
   }
