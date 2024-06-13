@@ -2,7 +2,7 @@
 
 ## Project Status
 
-![Project Build Status](https://github.com/hnevkop/demo-user-service/actions/workflows/main.yml/badge.svg)
+[![Java CI with Maven](https://github.com/hnevkop/demo-user-service/actions/workflows/maven.yml/badge.svg)](https://github.com/hnevkop/demo-user-service/actions/workflows/maven.yml)
 
 ## Project Overview
 
