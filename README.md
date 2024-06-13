@@ -1,5 +1,9 @@
 # Project Description
 
+## Project Status
+
+![Project Build Status](https://github.com/hnevkop/demo-user-service/actions/workflows/main.yml/badge.svg)
+
 ## Project Overview
 
 This application is a basic project management system that establishes a many-to-many relationship between Users and Projects. Users can be assigned to multiple projects, and each project can have many users associated with it.
